@@ -1,20 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-11T12:47:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">gyepark’s blog</title><subtitle>궁금한 것 찾아보고 기록하는 블로그</subtitle><author><name>gyepark</name></author><entry><title type="html">Post: Standard</title><link href="http://localhost:4000/blog/post-standard/" rel="alternate" type="text/html" title="Post: Standard" /><published>2010-01-07T00:00:00+09:00</published><updated>2010-01-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/post-standard</id><content type="html" xml:base="http://localhost:4000/blog/post-standard/">&lt;p&gt;All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, “Oh, why can’t you remain like this for ever!” This was all that passed between them on the subject, but henceforth Wendy knew that she must grow up. You always know after you are two. Two is the beginning of the end.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-21T00:02:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> </title><subtitle>학습하거나 문제를 해결한 것을 기록하는 블로그</subtitle><author><name>박경모(Gyeongmo Park)</name></author><entry><title type="html">[Github Blog] jekyll 설치 시 ERROR: Error installing jekyll 오류 해결</title><link href="http://localhost:4000/github_blog/github-blog-errors/" rel="alternate" type="text/html" title="[Github Blog] jekyll 설치 시 ERROR: Error installing jekyll 오류 해결" /><published>2023-10-20T00:00:00+09:00</published><updated>2023-10-20T00:00:00+09:00</updated><id>http://localhost:4000/github_blog/github-blog-errors</id><content type="html" xml:base="http://localhost:4000/github_blog/github-blog-errors/">&lt;hr /&gt;
 
-&lt;p&gt;Mrs. Darling first heard of Peter when she was tidying up her children’s minds. It is the nightly custom of every good mother after her children are asleep to rummage in their minds and put things straight for next morning, repacking into their proper places the many articles that have wandered during the day.&lt;/p&gt;
+&lt;h2 id=&quot;문제-상황&quot;&gt;문제 상황&lt;/h2&gt;
 
-&lt;!--more--&gt;
+&lt;p&gt;깃헙 블로그를 위해 jekyll gem을 설치할 때, 아래와 같은 에러가 발생했습니다.&lt;/p&gt;
 
-&lt;p&gt;This post has a manual excerpt &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; set after the second paragraph. The following YAML Front Matter has also be applied:&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;excerpt_separator&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;!--more--&amp;gt;&quot;&lt;/span&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ERROR:  Error installing jekyll:
+        The last version of sass-embedded &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;~&amp;gt; 1.54&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; to support your Ruby &amp;amp; RubyGems was 1.63.6. Try installing it with &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;sass-embedded &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 1.63.6&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; and &lt;span class=&quot;k&quot;&gt;then &lt;/span&gt;running the current &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;again
+        sass-embedded requires Ruby version &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; 3.0.0. The current ruby version is 2.7.0.0.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;If you could keep awake (but of course you can’t) you would see your own mother doing this, and you would find it very interesting to watch her. It is quite like tidying up drawers. You would see her on her knees, I expect, lingering humorously over some of your contents, wondering where on earth you had picked this thing up, making discoveries sweet and not so sweet, pressing this to her cheek as if it were as nice as a kitten, and hurriedly stowing that out of sight. When you wake in the morning, the naughtiness and evil passions with which you went to bed have been folded up small and placed at the bottom of your mind and on the top, beautifully aired, are spread out your prettier thoughts, ready for you to put on.&lt;/p&gt;
+&lt;p&gt;이를 해결하기 위해선 에러 메시지에 나온 내용대로 루비의 버전을 3.0.0 이상으로 업그레이드 해야합니다.
+하지만 apt 패키지 관리자를 이용해 삭제, 업그레이드 등을 시도해봐도 로컬에 설치된 루비의 버전을 2.7.0에서 바꿀 수 없었습니다( 이에 대해선 아래 System Ruby를 참고! ).&lt;/p&gt;
 
-&lt;p&gt;I don’t know whether you have ever seen a map of a person’s mind. Doctors sometimes draw maps of other parts of you, and your own map can become intensely interesting, but catch them trying to draw a map of a child’s mind, which is not only confused, but keeps going round all the time. There are zigzag lines on it, just like your temperature on a card, and these are probably roads in the island, for the Neverland is always more or less an island, with astonishing splashes of colour here and there, and coral reefs and rakish-looking craft in the offing, and savages and lonely lairs, and gnomes who are mostly tailors, and caves through which a river runs, and princes with six elder brothers, and a hut fast going to decay, and one very small old lady with a hooked nose. It would be an easy map if that were all, but there is also first day at school, religion, fathers, the round pond, needle-work, murders, hangings, verbs that take the dative, chocolate pudding day, getting into braces, say ninety-nine, three-pence for pulling out your tooth yourself, and so on, and either these are part of the island or they are another map showing through, and it is all rather confusing, especially as nothing will stand still.&lt;/p&gt;
+&lt;h2 id=&quot;해결-방법&quot;&gt;해결 방법&lt;/h2&gt;
 
-&lt;p&gt;Of course the Neverlands vary a good deal. John’s, for instance, had a lagoon with flamingoes flying over it at which John was shooting, while Michael, who was very small, had a flamingo with lagoons flying over it. John lived in a boat turned upside down on the sands, Michael in a wigwam, Wendy in a house of leaves deftly sewn together. John had no friends, Michael had friends at night, Wendy had a pet wolf forsaken by its parents, but on the whole the Neverlands have a family resemblance, and if they stood still in a row you could say of them that they have each other’s nose, and so forth. On these magic shores children at play are for ever beaching their coracles [simple boat]. We too have been there; we can still hear the sound of the surf, though we shall land no more.&lt;/p&gt;
+&lt;p&gt;결론부터 말하자면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt;와 같은 루비 버전 관리자를 사용해 필요한 버전의 루비를 설치하고, 새로 설치한 버전을 global 또는 local에서 활용할 버전으로 등록해 사용하면 됩니다.&lt;/p&gt;
 
-&lt;p&gt;Of all delectable islands the Neverland is the snuggest and most compact, not large and sprawly, you know, with tedious distances between one adventure and another, but nicely crammed. When you play at it by day with the chairs and table-cloth, it is not in the least alarming, but in the two minutes before you go to sleep it becomes very real. That is why there are night-lights.&lt;/p&gt;
+&lt;p class=&quot;notice--info&quot;&gt;:bulb: &lt;strong&gt;info&lt;/strong&gt;&lt;br /&gt;
+rbenv의 버전에 따라 설치할 수 있는 루비 버전이 정해져있으므로, 직접 깃헙 리포지토리를 클론해서 사용하는 방법을 권장합니다.&lt;/p&gt;
 
-&lt;p&gt;Occasionally in her travels through her children’s minds Mrs. Darling found things she could not understand, and of these quite the most perplexing was the word Peter. She knew of no Peter, and yet he was here and there in John and Michael’s minds, while Wendy’s began to be scrawled all over with him. The name stood out in bolder letters than any of the other words, and as Mrs. Darling gazed she felt that it had an oddly cocky appearance.&lt;/p&gt;</content><author><name>gyepark</name></author><category term="Blog" /><category term="Post Formats" /><category term="readability" /><category term="standard" /><summary type="html">All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, “Oh, why can’t you remain like this for ever!” This was all that passed between them on the subject, but henceforth Wendy knew that she must grow up. You always know after you are two. Two is the beginning of the end. Mrs. Darling first heard of Peter when she was tidying up her children’s minds. It is the nightly custom of every good mother after her children are asleep to rummage in their minds and put things straight for next morning, repacking into their proper places the many articles that have wandered during the day.</summary></entry></feed>
+&lt;p&gt;rbenv 깃헙 리포지토리를 클론해서 rbenv를 설치하는 방법은 다음과 같습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;eval &quot;$(~/.rbenv/bin/rbenv init - bash)&quot;&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc &lt;span class=&quot;c&quot;&gt;# 또는 터미널을 껐다가 다시 켜도 된다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;rbenv를 설치했다면, 다음 명령어로 설치할 수 있는 루비 버전을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 설치할 수 있는 최신 안정화 버전을 모두 보여준다.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 설치할 수 있는 모든 루비 버전을 보여준다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;:bulb: &lt;strong&gt;info&lt;/strong&gt;&lt;br /&gt;
+만약 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv install&lt;/code&gt; 명령을 찾을 수 없다는 오류가 발생한다면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone https://github.com/rbenv/ruby-build.git &quot;$(rbenv root)&quot;/plugins/ruby-build&lt;/code&gt; 명령을 실행해 ruby-build를 설치하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;적절한 버전을 찾은 다음, 아래와 같이 해당 버전의 루비를 설치하고 설정해주면 됩니다.&lt;br /&gt;
+3.1.2 버전을 예를 들어보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;3.1.2
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rbenv global 3.1.2   &lt;span class=&quot;c&quot;&gt;# 시스템 전체에 걸쳐 3.1.2 버전의 루비를 기본값으로 설정하낟.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 또는:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rbenv &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;3.1.2    &lt;span class=&quot;c&quot;&gt;# 현재 디렉터리에 대해 3.1.2 루비를 사용한다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;시스템-루비&quot;&gt;시스템 루비&lt;/h2&gt;
+
+&lt;p&gt;문제는 해결했지만, 궁금한 점이 하나 남아있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;“왜 루비 버전 관리자를 사용하지 않고 로컬에 설치되어있는 루비를 활용하려 했을 때, 그 버전을 바꾸지 못했을까?”&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이를 위해선 시스템 루비에 대해 먼저 알아야 합니다.&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;:bulb: &lt;strong&gt;시스템 루비란?&lt;/strong&gt;&lt;br /&gt;
+운영체제에 포함되어 운영체제 설치 시 설치되는 루비 또는 패키지 관리자를 통해 사용할 수 있는 루비를 말합니다.&lt;/p&gt;
+
+&lt;p&gt;즉, 앞에서 말한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;로컬에 설치되어있는 루비&lt;/code&gt;가 바로 시스템 루비인 것입니다.&lt;/p&gt;
+
+&lt;p&gt;만약 현재 활용중인 운영체제가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 20.04 LTS&lt;/code&gt; 버전이라면 이 운영체제를 설치한 머신에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.7.0&lt;/code&gt; 버전의 루비가 시스템 루비로 설치되어 있을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;이 시스템 루비는 운영체제의 일부이므로 이를 사용자가 직접 활용하는 건 일반적으로 권장되지 않습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;시스템-루비를-사용하지-말아야-할-이유&quot;&gt;시스템 루비를 사용하지 말아야 할 이유&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 시스템 루비는 사용자를 위한 것이 아니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;시스템 루비는 운영체제와 이에 의존하는 패키지들을 위한 것이므로, 문제 발생 시 정상적으로 동작하는 상태로 돌아가기 위해 환경 변수 등을 포함해 사용자가 만든 변경 사항들을 무시하고 이전 상태로 복구할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 시스템 루비는 오래된 버전일 수 있다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;앞에서도 말했듯, 깃헙 블로그를 위한 패키지들을 설치하던 머신의 운영체제는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 20.04 LTS&lt;/code&gt; 버전이었고, 이 운영체제의 시스템 루비는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.7.0&lt;/code&gt; 버전이었습니다.&lt;/p&gt;
+
+&lt;p&gt;애초에 jekyll을 설치할 수 없다는 오류 메시지 또한 필요한 패키지를 설치하기엔 루비의 버전이 너무 오래 되었다는 내용이었죠.&lt;/p&gt;
+
+&lt;p&gt;또한 최신 버전의 루비는 이전 버전의 루비에서 발생하던 버그나 보안 이슈 등을 해결하고 새로운 기능 등을 추가한 버전이기 때문에, 최신 버전의 루비를 사용하는 것이 더 좋습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 시스템 루비는 사용자가 제거, 업그레이드, 다운그레이드가 불가능하다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;시스템 루비는 운영체제에서 정해놓은 버전을 벗어날 수 없습니다.&lt;/p&gt;
+
+&lt;p&gt;앞의 과정에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;로컬에 설치된 루비&lt;/code&gt;를 업그레이드 할 수 없는 이유 또한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 20.04 LTS&lt;/code&gt;가 정한 시스템 루비의 버전이 2.7.0이기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;따라서, 루비 버전 관리자를 이용한 non-system ruby를 사용하는 걸 권장합니다.&lt;/p&gt;</content><author><name>박경모(Gyeongmo Park)</name></author><category term="Github_Blog" /><category term="Github_Blog" /><category term="ruby" /><summary type="html"></summary></entry></feed>
