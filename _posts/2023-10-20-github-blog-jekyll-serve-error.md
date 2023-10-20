@@ -1,5 +1,6 @@
 ---
 title: "[Github Blog] bundler: failed to load command: jekyll 오류 해결"
+excerpt: "bundle exec jekyll serve 명령 실행 시 failed to load command: jekyll 오류 해결 방법"
 categories:
   - Github_Blog
 tags:

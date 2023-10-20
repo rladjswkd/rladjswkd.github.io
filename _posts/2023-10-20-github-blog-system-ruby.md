@@ -1,5 +1,6 @@
 ---
 title: "[Github Blog] jekyll 설치 시 ERROR: Error installing jekyll 오류 해결"
+excerpt: "gem install jekyll 명령 실행 시 ERROR: Error installing jekyll, sass-embedded 오류 해결 방법"
 categories:
   - Github_Blog
 tags:
